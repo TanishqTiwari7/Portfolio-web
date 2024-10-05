@@ -165,12 +165,33 @@ nav ul li a:focus {
   animation-delay: 0.1s;
   width: 3vw;
 }
+.chakra{
+  width: 100%;
+  scale: 0.8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -25vh;
+  opacity: 30%;  
+}
+.chakra img {
+  animation: chakra;
+  animation-timeline: view();
+}
+@keyframes chakra{
+  0%{
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* About Me Section */
 #about {
   padding: 50px 20px;
   background-color: #f4f1e3;
 }
-
 #about h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -204,6 +225,11 @@ nav ul li a:focus {
   border-radius: 10px;
   font-size: 18px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 350ms ease-in-out;
+}
+.skills-list li:hover{
+  scale: 1.01;
+  border: solid 1px rgb(33, 12, 12) ;
 }
 /* Projects Section */
 #projects {
@@ -226,6 +252,7 @@ nav ul li a:focus {
   border-radius: 10px;
   width: 45%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 400ms ease-in-out;
 }
 .project h2 {
   font-size: 22px;
@@ -234,6 +261,10 @@ nav ul li a:focus {
 .project a {
   text-decoration: underline;
   color: rgb(166, 127, 193);
+}
+.project:hover{
+  scale: 1.05;
+  border: solid 1px rgb(33, 12, 12) ;
 }
 /* Contact Section */
 #contact {
@@ -270,18 +301,17 @@ nav ul li a:focus {
     filter: blur(40px);
     transform: translateY(0vh) scale(50%);
   }
-  20% {
+  34% {
     filter: blur(0px);
     scale: 100%;
   }
-  80% {
+  90% {
     filter: blur(0px);
     scale: 100%;
   }
   100% {
     filter: blur(40px);
     /* scale: 50%; */
-    transform: translateY(0vh) scale(100%);
   }
 }
 /* .about,
